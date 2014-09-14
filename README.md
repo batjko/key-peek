@@ -6,13 +6,13 @@ This is your beloved [Keybinding Resolver](https://atom.io/packages/keybinding-r
 * It is slimmed down (only shows one line: the matched key binding)
 * The different sections are formatted a little prettier.
 
-![A spankin' screenshot](http://raw.github.com/batjko/key-peek/screenshot/screenshot1.jpg)
+![A spankin' screenshot](http://raw.github.com/batjko/key-peek/master/screenshot/screenshot1.jpg)
 
 #### Toggle
 
 Command Palette (`Ctrl-Shift-P`):
 
-![A spankin' screenshot](http://raw.github.com/batjko/key-peek/screenshot/screenshot2.jpg)
+![A spankin' screenshot](http://raw.github.com/batjko/key-peek/master/screenshot/screenshot2.jpg)
 
 By default, this package doesn't get triggered by a key binding, it's up to you to choose one if you wish.
 
