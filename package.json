@@ -7,7 +7,7 @@
     "key-peek:toggle"
   ],
   "repository": "https://github.com/batjko/key-peek",
-  "license": "MIT",
+  "license": "None",
   "engines": {
     "atom": ">0.127.0"
   },
