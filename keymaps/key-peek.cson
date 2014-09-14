@@ -1,3 +1,0 @@
-# If you want this package to replace the built-in resolver, use this in your keymap:
-#'.workspace':
-#  'ctrl-.': 'key-peek:toggle'
