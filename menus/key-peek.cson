@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable key-peek': 'key-peek:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'key-peek'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'key-peek:toggle' }
+      ]
+    ]
+  }
+]

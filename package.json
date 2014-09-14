@@ -1,0 +1,14 @@
+{
+  "name": "key-peek",
+  "main": "./lib/key-peek",
+  "version": "0.0.0",
+  "description": "A slimmer, prettier version of the key binding resolver, showing only the used binding at the bottom of the workspace.",
+  "activationEvents": ["key-peek:toggle"],
+  "repository": "https://github.com/batjko/key-peek",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.124.0"
+  },
+  "dependencies": {
+  }
+}
