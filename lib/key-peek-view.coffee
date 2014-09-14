@@ -35,6 +35,7 @@ class KeyPeekView extends View
     super
     @unsubscribe()
 
+
   update: (keystrokes, keyBinding, keyboardEventTarget) ->
     @commands.html $$ ->
       @table class: 'table-condensed', =>
