@@ -1,7 +1,7 @@
 {
   "name": "key-peek",
   "main": "./lib/key-peek",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A slimmer, prettier version of the key binding resolver, showing only the used binding at the bottom of the workspace.",
   "activationEvents": [
     "key-peek:toggle"
