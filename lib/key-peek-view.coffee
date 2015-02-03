@@ -8,10 +8,6 @@ class KeyPeekView extends View
       @div outlet: 'commands', class: 'panel-body padded padding'
 
   initialize: ->
-
-    atom.workspaceView.command 'key-peek:toggle', => @toggle()
-
-    # open source link
     @on 'click', '.source', (event) -> atom.workspace.open(event.target.innerText)
 
   serialize: ->
@@ -36,6 +32,7 @@ class KeyPeekView extends View
 
     @disposables.add atom.keymap.onDidMatchBinding ({keystrokes, binding, keyboardEventTarget}) =>
       @update(keystrokes, binding, keyboardEventTarget)
+
 
   detach: ->
     @disposables?.dispose()
