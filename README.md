@@ -1,6 +1,6 @@
 # Key Peek
 
-## What is this?
+### What is this?
 
 This is your beloved [Keybinding Resolver](https://atom.io/packages/keybinding-resolver) for the Atom editor, except:
 * It is slimmed down (only shows one line: the matched key binding)
@@ -8,11 +8,7 @@ This is your beloved [Keybinding Resolver](https://atom.io/packages/keybinding-r
 
 ![A spankin' screenshot](http://raw.github.com/batjko/key-peek/master/screenshot/screenshot1.jpg)
 
-### Install
-
-```apm install key-peek```
-
-### Toggle
+#### Toggle
 
 Command Palette (`Ctrl-Shift-P`):
 

@@ -1,4 +1,5 @@
-{$$, View, keymap} = require 'atom'
+{Disposable, CompositeDisposable} = require 'atom'
+{$$, View} = require 'space-pen'
 
 module.exports =
 class KeyPeekView extends View
@@ -6,34 +7,38 @@ class KeyPeekView extends View
     @div class: 'key-peek panel-bottom padding', =>
       @div outlet: 'commands', class: 'panel-body padded padding'
 
-  initialize: ({attached})->
-    @attach() if attached
+  initialize: ->
 
     atom.workspaceView.command 'key-peek:toggle', => @toggle()
 
     # open source link
-    @on 'click', '.source', (event) -> atom.workspaceView.open(event.target.innerText)
+    @on 'click', '.source', (event) -> atom.workspace.open(event.target.innerText)
 
   serialize: ->
-    attached: @hasParent()
+    attached: @panel?.isVisible()
 
   destroy: ->
     @detach()
 
   toggle: ->
-    if @hasParent()
+    if @panel?.isVisible()
       @detach()
     else
       @attach()
 
   attach: ->
-    atom.workspaceView.appendToBottom(this)
-    @subscribe atom.keymap.onDidMatchBinding ({keystrokes, binding, keyboardEventTarget}) =>
+    @disposables = new CompositeDisposable
+
+    @panel = atom.workspace.addBottomPanel(item: this)
+    @disposables.add new Disposable =>
+      @panel.destroy()
+      @panel = null
+
+    @disposables.add atom.keymap.onDidMatchBinding ({keystrokes, binding, keyboardEventTarget}) =>
       @update(keystrokes, binding, keyboardEventTarget)
 
   detach: ->
-    super
-    @unsubscribe()
+    @disposables?.dispose()
 
 
   update: (keystrokes, keyBinding, keyboardEventTarget) ->
