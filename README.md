@@ -16,11 +16,17 @@ Command Palette (`Ctrl-Shift-P`):
 
 By default, this package doesn't get triggered by a key binding, it's up to you to choose one if you wish.
 
-For example, you could override the built-in Keybinding Resolver to use **Key Peek** instead, simply by adding this to your keymap:
+For example, you could override the built-in Keybinding Resolver to use **Key Peek** instead, simply by adding one or all of these to your keymap:
 
 ```cson
-'.workspace':
-  'ctrl-.': 'key-peek:toggle'
+'.platform-darwin':
+  'cmd-.': 'key-binding-resolver:toggle'
+
+'.platform-win32':
+  'ctrl-.': 'key-binding-resolver:toggle'
+
+'.platform-linux':
+  'ctrl-.': 'key-binding-resolver:toggle'
 ```
 
 This was meant as an exercise for myself, but I thought others might find it useful, too.
