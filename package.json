@@ -3,9 +3,11 @@
   "main": "./lib/key-peek",
   "version": "0.2.5",
   "description": "A slimmer, prettier version of the key binding resolver.",
-  "activationEvents": [
-    "key-peek:toggle"
-  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "key-peek:toggle"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/batjko/key-peek"
