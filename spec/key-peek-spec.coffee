@@ -1,4 +1,3 @@
-{WorkspaceView} = require 'atom'
 KeyPeek = require '../lib/key-peek'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -8,23 +7,24 @@ KeyPeek = require '../lib/key-peek'
 
 describe "KeyPeek", ->
   activationPromise = null
+  workspaceElement = null
 
   beforeEach ->
-    atom.workspaceView = new WorkspaceView
+    workspaceElement = atom.views.getView(atom.workspace)
     activationPromise = atom.packages.activatePackage('key-peek')
 
   describe "when the key-peek:toggle event is triggered", ->
     it "attaches and then detaches the view", ->
-      expect(atom.workspaceView.find('.key-peek')).not.toExist()
+      expect(workspaceElement.querySelector('.key-peek')).not.toExist()
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.workspaceView.trigger 'key-peek:toggle'
+      atom.commands.dispatch(workspaceElement, 'key-peek:toggle')
 
       waitsForPromise ->
         activationPromise
 
       runs ->
-        expect(atom.workspaceView.find('.key-peek')).toExist()
-        atom.workspaceView.trigger 'key-peek:toggle'
-        expect(atom.workspaceView.find('.key-peek')).not.toExist()
+        expect(workspaceElement.querySelector('.key-peek')).toExist()
+        atom.commands.dispatch(workspaceElement, 'key-peek:toggle')
+        expect(workspaceElement.classList.contains('key-peek')).not.toExist()
