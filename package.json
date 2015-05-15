@@ -1,10 +1,12 @@
 {
   "name": "key-peek",
   "main": "./lib/key-peek",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A slimmer, prettier version of the key binding resolver.",
   "activationCommands": {
-    "atom-workspace": ["key-peek:toggle"]
+    "atom-workspace": [
+      "key-peek:toggle"
+    ]
   },
   "repository": {
     "type": "git",
