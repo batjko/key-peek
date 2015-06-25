@@ -30,7 +30,7 @@ class KeyPeekView extends View
       @panel.destroy()
       @panel = null
 
-    @disposables.add atom.keymap.onDidMatchBinding ({keystrokes, binding, keyboardEventTarget}) =>
+    @disposables.add atom.keymaps.onDidMatchBinding ({keystrokes, binding, keyboardEventTarget}) =>
       @update(keystrokes, binding, keyboardEventTarget)
 
 
