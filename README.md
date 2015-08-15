@@ -31,3 +31,5 @@ For example, you could override the built-in Keybinding Resolver to use **Key Pe
 
 This was meant as an exercise for myself, but I thought others might find it useful, too.
 [Let me know](https://github.com/batjko/key-peek/issues) if you have any problems with it or want to suggest changes.
+
+[![endorse](https://api.coderwall.com/batjko/endorsecount.png)](https://coderwall.com/batjko)
