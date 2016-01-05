@@ -20,13 +20,13 @@ For example, you could override the built-in Keybinding Resolver to use **Key Pe
 
 ```cson
 '.platform-darwin':
-  'cmd-.': 'key-binding-resolver:toggle'
+  'cmd-.': 'key-peek:toggle'
 
 '.platform-win32':
-  'ctrl-.': 'key-binding-resolver:toggle'
+  'ctrl-.': 'key-peek:toggle'
 
 '.platform-linux':
-  'ctrl-.': 'key-binding-resolver:toggle'
+  'ctrl-.': 'key-peek:toggle'
 ```
 
 This was meant as an exercise for myself, but I thought others might find it useful, too.

@@ -20,7 +20,6 @@
     "space-pen": "^5.0.0",
     "atom-space-pen-views": "^2.0.3"
   },
-  "readme": "# Key Peek\n\n### What is this?\n\nThis is your beloved [Keybinding Resolver](https://atom.io/packages/keybinding-resolver) for the Atom editor, except:\n* It is slimmed down (only shows one line: the matched key binding)\n* The different sections are formatted a little prettier.\n\n![A spankin' screenshot](http://raw.github.com/batjko/key-peek/master/screenshot/screenshot1.jpg)\n\n#### Toggle\n\nCommand Palette (`Ctrl-Shift-P`):\n\n![A spankin' screenshot](http://raw.github.com/batjko/key-peek/master/screenshot/screenshot2.jpg)\n\nBy default, this package doesn't get triggered by a key binding, it's up to you to choose one if you wish.\n\nFor example, you could override the built-in Keybinding Resolver to use **Key Peek** instead, simply by adding this to your keymap:\n\n```cson\n'.workspace':\n  'ctrl-.': 'key-peek:toggle'\n```\n\nThis was meant as an exercise for myself, but I thought others might find it useful, too.\n[Let me know](https://github.com/batjko/key-peek/issues) if you have any problems with it or want to suggest changes.\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/batjko/key-peek/issues"
